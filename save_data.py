@@ -5,9 +5,9 @@ def _save_pickle(obj, file_path):
         pickle.dump(obj, f)
 
 def _load_pickle(file_path):
-    with open(file_path, 'wb') as f:
+    with open(file_path, 'rb') as f:
         obj = pickle.load(f)
     return obj
 _save_pickle(faces, "./faces.pkl")
 _save_pickle(y_labels, "./y_labels.pkl")
-_save_pickle(images_file, "./images_file.pkl")
+_save_pickle(images_file, "./images_file.pkl")  
